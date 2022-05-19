@@ -1,4 +1,4 @@
-package ua.masaltsev.oleksapetclinic;
+package ua.masaltsev.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

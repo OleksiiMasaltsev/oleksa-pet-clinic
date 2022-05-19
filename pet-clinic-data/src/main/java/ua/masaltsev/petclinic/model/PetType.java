@@ -1,4 +1,4 @@
-package ua.masaltsev.oleksapetclinic.model;
+package ua.masaltsev.petclinic.model;
 
 public class PetType {
 
