@@ -17,7 +17,7 @@
 
     <groupId>ua.masaltsev</groupId>
     <artifactId>oleksa-pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>oleksa-pet-clinic</name>
     <description>Oleksa Pet Clinic Project</description>
 
@@ -51,7 +51,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/OleksiyMasaltsev/oleksa-pet-clinic.git</developerConnection>
-      <tag>oleksa-pet-clinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
