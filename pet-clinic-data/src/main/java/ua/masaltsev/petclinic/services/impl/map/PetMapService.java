@@ -1,12 +1,18 @@
-package ua.masaltsev.petclinic.services.map;
+package ua.masaltsev.petclinic.services.impl.map;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 import ua.masaltsev.petclinic.model.Pet;
-import ua.masaltsev.petclinic.services.CrudService;
+import ua.masaltsev.petclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
-
+/**
+ * Created by jt on 7/21/18.
+ */
+@Service
+@Profile({"default", "map"})
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
@@ -19,7 +25,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
