@@ -1,4 +1,4 @@
-package ua.masaltsev.petclinic.services.map;
+package ua.masaltsev.petclinic.services.impl.map;
 
 import ua.masaltsev.petclinic.model.Owner;
 import ua.masaltsev.petclinic.services.CrudService;
