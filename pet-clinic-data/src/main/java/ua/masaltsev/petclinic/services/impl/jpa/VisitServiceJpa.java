@@ -1,5 +1,7 @@
-package ua.masaltsev.petclinic.services.impl;
+package ua.masaltsev.petclinic.services.impl.jpa;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 import ua.masaltsev.petclinic.model.Visit;
 import ua.masaltsev.petclinic.repositories.VisitRepository;
 import ua.masaltsev.petclinic.services.VisitService;
@@ -7,6 +9,8 @@ import ua.masaltsev.petclinic.services.VisitService;
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("jpa")
 public class VisitServiceJpa implements VisitService {
 
     private final VisitRepository visitRepository;

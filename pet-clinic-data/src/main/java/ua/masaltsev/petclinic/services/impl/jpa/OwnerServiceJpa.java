@@ -1,5 +1,6 @@
-package ua.masaltsev.petclinic.services.impl;
+package ua.masaltsev.petclinic.services.impl.jpa;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import ua.masaltsev.petclinic.model.Owner;
 import ua.masaltsev.petclinic.repositories.OwnerRepository;
@@ -9,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-//@Profile("jpa")
+@Profile("jpa")
 public class OwnerServiceJpa implements OwnerService {
 
     private final OwnerRepository ownerRepository;

@@ -1,5 +1,7 @@
-package ua.masaltsev.petclinic.services.impl;
+package ua.masaltsev.petclinic.services.impl.jpa;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 import ua.masaltsev.petclinic.model.PetType;
 import ua.masaltsev.petclinic.repositories.PetTypeRepository;
 import ua.masaltsev.petclinic.services.PetTypeService;
@@ -7,6 +9,8 @@ import ua.masaltsev.petclinic.services.PetTypeService;
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("jpa")
 public class PetTypeServiceJpa implements PetTypeService {
 
     private final PetTypeRepository petTypeRepository;
