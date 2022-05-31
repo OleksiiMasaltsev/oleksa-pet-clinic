@@ -1,6 +1,7 @@
 package ua.masaltsev.petclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import ua.masaltsev.petclinic.model.*;
 import ua.masaltsev.petclinic.services.*;
 
@@ -9,7 +10,7 @@ import java.time.LocalDate;
 /**
  * Created by jt on 7/25/18.
  */
-//@Component
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
