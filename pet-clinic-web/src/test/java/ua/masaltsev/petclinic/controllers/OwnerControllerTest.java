@@ -23,11 +23,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(MockitoExtension.class)
 class OwnerControllerTest {
 
+    @InjectMocks
+    OwnerController ownerController;
+
+    @Mock
+    OwnerService ownerService;
+
+    MockMvc mockMvc;
+
     Set<Owner> owners;
     Owner testOwner1;
     Owner testOwner2;
-
-    MockMvc mockMvc;
 
     static final String FIRST_NAME_1 = "Stepan";
     static final String LAST_NAME_1 = "Gryshko";
@@ -36,12 +42,6 @@ class OwnerControllerTest {
     static final String FIRST_NAME_2 = "Olga";
     static final String LAST_NAME_2 = "Kruchko";
     static final long ID_2 = 2L;
-
-    @InjectMocks
-    OwnerController ownerController;
-
-    @Mock
-    OwnerService ownerService;
 
     @BeforeEach
     void setUp() {
