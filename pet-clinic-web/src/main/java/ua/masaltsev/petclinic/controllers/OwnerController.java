@@ -27,10 +27,15 @@ public class OwnerController {
     }
 
     @RequestMapping({"", "/", "/index", "/index.html"})
+    public String showOwnersHome() {
+        return "owners/index";
+    }
+
+    @RequestMapping("/showOwners")
     public String showOwners(Model model) {
         Set<Owner> owners = ownerService.findAll();
         model.addAttribute("owners", owners);
-        return "owners/index";
+        return "owners/owners_list";
     }
 
     @RequestMapping("/find")
